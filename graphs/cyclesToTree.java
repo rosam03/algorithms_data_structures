@@ -52,14 +52,12 @@ class Solution {
     return pair;
   }
 
-  // A utility function to do union of two subsets
+  // join the two sets x and y contained in
   void union(int parent[], int x, int y) {
-    int xset = find(parent, x);
-    int yset = find(parent, y);
     parent[xset] = yset;
   }
 
-  // A utility function to find the subset of an element i
+  // find the set i is contained in
   int find(int parent[], int i) {
     if (parent[i] == -1)
     return i;
